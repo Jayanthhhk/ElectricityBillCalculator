@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://127.0.0.1:5500/ElectricityCalci.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELectricityBill-Calculator</title>
+</head>
+<body>
+
+  <div>
+     
+  <div class="h1class">
+  
+  <h1 class="Heading"> ElectricityBill-Calculator </h1>
+
+  </div>
+
+  <div>
+
+  <h2 class="Sub-Heading"> *** Conserve Electricity ***</h2>
+
+  </div>
+   
+  
+  
+  <div>
+
+    <div>
+      
+      <label class="Fan-label"> No-of-Fans Used:</label>
+      <input type="text" id="UserInput" placeholder=" " fdprocessedid="uec4ik">
+
+
+
+      <label class="hours-label">No.of.Fanhours used(per day) :</label>
+      <input type="text" id="hours-label1" placeholder=" " fdprocessedid="gzi1wj">
+    
+    </div>
+
+    <div class="ldiv">
+
+      <label class="Light-label"> No-of-Lights Used :</label>
+      <input type="text" id="Light-label" placeholder=" " fdprocessedid="02nrv">
+
+      <label class="hours-label2">No.of.Light-hours used(per day) :</label>
+      <input type="text" id="hours-label2" placeholder=" " fdprocessedid="gwsymr">
+    
+    </div>
+
+    <div class="tdiv">
+
+      <label class="Tv-label"> No-of-Television(s) used:</label>
+      <input type="text" id="UserInputt" placeholder=" " fdprocessedid="xydgg">
+
+      <label class="hours-label5">No.of.Tv-hours used(per day) : </label>
+      <input type="text" id="hours-labels" placeholder=" " fdprocessedid="la012">
+
+    </div>
+
+
+    
+    <div class="wdiv">
+
+      <label class="Wash-label"> No-of-Washing Machine(s) :</label>
+      <input type="text" id="Wash-label" placeholder=" " fdprocessedid="z3dbu">
+
+      <label class="hours-label3">No.of.Wm-hours used(per day) :</label>
+      <input type="text" id="hours-label3" placeholder=" " fdprocessedid="9u5klc">
+
+    </div>
+
+      
+    <div class="cdiv">
+
+      <label class="Charge-label"> No-of-ChargingPorts :</label>
+      <input type="text" id="Charge-label" placeholder=" " fdprocessedid="4a73zk">
+
+      <label class="hours-label4">No.of.CP-hours used(per day) :</label>
+      <input type="text" id="hours-label4" placeholder=" " fdprocessedid="obock">
+
+    </div>
+
+    <div class="odiv">
+
+      <label class="Other-label"> No-of-Other-Appliances:</label>
+      <input type="text" id="UserInput-4" placeholder=" " fdprocessedid="binb1d">
+
+      <label class="hours-label5">No.of.Other-hours used(per day) : </label>
+      <input type="text" id="hours-label5" placeholder=" " fdprocessedid="7qlw0u">
+
+    </div>
+
+    
+    <div class="ddiv">
+      <label class="days">Select the number of days:</label>
+      <select id="days" fdprocessedid="b4fzg">
+          <option value="" disabled="" selected="">Select days</option> 
+      <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
+  </div>
+
+    
+
+
+   
+
+
+    
+    <div class="bdiv">
+
+      <button class="cal" fdprocessedid="f4spfe"> Calculate </button>
+      <input type="text" id="result" readonly="" placeholder="Toatl consumption" fdprocessedid="5ufy8b">
+          
+      
+    </div>
+
+
+  
+    
+   
+
+  
+  </div>
+
+  
+  
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+
+<script src="./ELectricityBill-Calculator_files/escript.js.download"></script>
+
+
+<link rel="stylesheet" href="./ELectricityBill-Calculator_files/style.css"></div><div class="screenHairImage" style="width: 200px; height: 200px; left: 111px; top: 494px; background-image: url(&quot;chrome-extension://egkikapjpndmjflbjjoondbihalgdjco/assets/h7.png&quot;);"></div><span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>

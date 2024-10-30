@@ -1,0 +1,56 @@
+// Populate the days dropdown (1 to 31)
+const daysDropdown = document.getElementById("days");
+for (let i = 1; i <= 31; i++) {
+    const option = document.createElement("option");
+    option.value = i;
+    option.textContent = i;
+    daysDropdown.appendChild(option);
+}
+
+document.querySelector('.cal').addEventListener('click', function() {
+ 
+    const days = parseInt(document.getElementById('days').value) || 1;
+
+   
+    const fans = parseInt(document.getElementById('UserInput').value) || 0;
+    const fanHours = parseInt(document.getElementById('hours-label1').value) || 0;
+
+    const lights = parseInt(document.getElementById('Light-label').value) || 0;
+    const lightHours = parseInt(document.getElementById('hours-label2').value) || 0;
+
+    const televisions = parseInt(document.getElementById('UserInputt').value) || 0;
+    const tvHours = parseInt(document.getElementById('hours-labels').value) || 0;
+
+    const washingMachines = parseInt(document.getElementById('Wash-label').value) || 0;
+    const wmHours = parseInt(document.getElementById('hours-label3').value) || 0;
+
+    const chargingPorts = parseInt(document.getElementById('Charge-label').value) || 0;
+    const cpHours = parseInt(document.getElementById('hours-label4').value) || 0;
+
+    const otherAppliances = parseInt(document.getElementById('UserInput-4').value) || 0;
+    const otherHours = parseInt(document.getElementById('hours-label5').value) || 0;
+
+    
+    const fanRate = 0.1; 
+    const lightRate = 0.06; 
+    const tvRate = 0.15; 
+    const wmRate = 0.5; 
+    const cpRate = 0.02; 
+    const otherRate = 0.2; 
+
+    
+    const fanConsumption = fans * fanHours * fanRate * days;
+    const lightConsumption = lights * lightHours * lightRate * days;
+    const tvConsumption = televisions * tvHours * tvRate * days;
+    const WmConsumption = washingMachines * wmHours * wmRate * days;
+    const cpConsumption = chargingPorts * cpHours * cpRate * days;
+    const otherConsumption = otherAppliances * otherHours * otherRate * days;
+
+ 
+    const totalConsumption = fanConsumption + lightConsumption + tvConsumption + WmConsumption + cpConsumption + otherConsumption;
+
+    const totalCost = totalConsumption * 4;
+ 
+
+    document.getElementById('result').value = `${totalCost.toFixed(2)} rs`;
+});
